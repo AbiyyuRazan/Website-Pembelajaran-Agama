@@ -130,11 +130,11 @@
                 <form onSubmit={handleSubmit} className="space-y-4 py-2">
                   <div>
                     <Label htmlFor="title" className="text-foreground/80">Judul Materi</Label>
-                    <Input id="title" name="title" value={newMaterial.title} onChange={handleInputChange} placeholder="Contoh: Pengenalan React Hooks" className="mt-1" />
+                    <Input id="title" name="title" value={newMaterial.title} onChange={handleInputChange} placeholder="Contoh: Pengenalan Penyakit Ain" className="mt-1" />
                   </div>
                   <div>
                     <Label htmlFor="author" className="text-foreground/80">Nama Kontributor</Label>
-                    <Input id="author" name="author" value={newMaterial.author} onChange={handleInputChange} placeholder="Contoh: Budi Santoso" className="mt-1" />
+                    <Input id="author" name="author" value={newMaterial.author} onChange={handleInputChange} placeholder="Contoh: Uvuveve Onyetenyevwe Ugwemubwem Ossas" className="mt-1" />
                   </div>
                   <div>
                     <Label htmlFor="content" className="text-foreground/80">Isi Materi</Label>
@@ -144,7 +144,10 @@
                     <DialogClose asChild>
                         <Button type="button" variant="outline">Batal</Button>
                     </DialogClose>
-                    <Button type="submit" className="shadow-md">{currentMaterial ? 'Simpan Perubahan' : 'Tambahkan Materi'}</Button>
+                    <Button type="button" // Ubah dari 'submit' ke 'button'
+    variant="destructive" // Warna merah error
+    className="shadow-md cursor-not-allowed opacity-75"
+    onClick={(e) => e.preventDefault()}>{currentMaterial ? 'Simpan Perubahan' : 'Tambahkan Materi'}</Button>
                   </DialogFooter>
                 </form>
               </DialogContent>
