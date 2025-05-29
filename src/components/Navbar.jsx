@@ -1,5 +1,4 @@
-
-    import React from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { BookOpenText, Home, Users, Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -36,10 +35,14 @@ const Navbar = () => {
       className="glassmorphic sticky top-0 z-50 shadow-md py-3 px-4 md:px-8"
     >
       <div className="container mx-auto flex justify-between items-center">
-        <NavLink to="/" className="text-2xl font-bold text-primary flex items-center gap-2">
+        <NavLink 
+          to="/" 
+          className="text-2xl font-bold text-primary flex items-center gap-2 hover:opacity-80 transition-opacity"
+        >
           <BookOpenText className="h-7 w-7" />
-          <span>BelajarKuy</span>
+          <span>BANI UNSIKA</span>
         </NavLink>
+        
         <div className="flex items-center space-x-2 md:space-x-4">
           {navItems.map((item) => (
             <NavLink
@@ -54,8 +57,18 @@ const Navbar = () => {
               <span className="ml-2 hidden md:inline">{item.label}</span>
             </NavLink>
           ))}
-          <Button variant="ghost" size="icon" onClick={toggleDarkMode} aria-label="Toggle Dark Mode">
-            {darkMode ? <Sun className="h-5 w-5 text-yellow-400" /> : <Moon className="h-5 w-5 text-foreground" />}
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            onClick={toggleDarkMode} 
+            aria-label="Toggle Dark Mode"
+            className="hover:bg-accent/50"
+          >
+            {darkMode ? (
+              <Sun className="h-5 w-5 text-yellow-400" />
+            ) : (
+              <Moon className="h-5 w-5 text-foreground" />
+            )}
           </Button>
         </div>
       </div>
@@ -64,4 +77,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-  

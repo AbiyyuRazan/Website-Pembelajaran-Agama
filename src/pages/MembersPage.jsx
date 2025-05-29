@@ -27,7 +27,7 @@ const members = [
     avatarText: 'AM',
     description: 'NPM : 2410631170125',
     socials: { linkedin: '', github: '' },
-    image: '/images/kharisma.jpg',
+    image: '/images/kharisma_teguh.jpg',
   },
    {
     name: 'M. Alfi Maulana Fattah',
@@ -35,7 +35,7 @@ const members = [
     avatarText: 'KT',
     description: 'NPM : 2410631170033',
     socials: { linkedin: '', github: '' },
-    image: '/images/alfi.jpg',
+    image: '/images/alfi_maulana.jpg',
   },
   {
     name: 'Zhundy Miftahulfalah Ashshidqy',
@@ -43,7 +43,7 @@ const members = [
     avatarText: 'ZM',
     description: 'NPM : 2410631170121',
     socials: { linkedin: '', github: '' },
-    image: '/images/zhundy.jpg',
+    image: '/images/zhundy_miftahul.jpg',
   },
 ];
 
