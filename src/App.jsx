@@ -27,6 +27,14 @@
         </Router>
       );
     }
+import PerananAgama from './pages/Islam/PerananAgama';
 
+function App() {
+  return (
+    <Routes>
+      <Route path="/islam/peranan-agama" element={<PerananAgama />} />
+    </Routes>
+  );
+}
     export default App;
   
